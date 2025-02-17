@@ -14,7 +14,17 @@ const Header = () => {
         </div>
 
         {/* دکمه تغییر تم */}
-      
+        <button 
+          onClick={toggleTheme} 
+          className="p-2 rounded-lg transition-all duration-300 hover:bg-gray-700 focus:outline-none"
+        >
+          {/* نمایش آیکن تغییر تم */}
+          {isDarkMode ? (
+            <span role="img" aria-label="moon">🌙</span> // آیکن ماه برای حالت تاریک
+          ) : (
+            <span role="img" aria-label="sun">🌞</span> // آیکن خورشید برای حالت روشن
+          )}
+        </button>
       </div>
     </div>
   );
